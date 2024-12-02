@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio website of Sai Vaibhav Kumar, showcasing skills, services, and work experience." />
+  <title>Sai Vaibhav Kumar | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" /><section class="home" id="home">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: #1e3a8a;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 10px 20px;
+    }
+
+    .navbar .logo a {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .navbar .menu {
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar .menu li {
+      margin: 0 15px;
+    }
+
+    .navbar .menu a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .navbar .menu a:hover {
+      color: #60a5fa;
+    }
+
+    .navbar .media-icons a {
+      color: #fff;
+      margin-left: 10px;
+      font-size: 20px;
+      transition: transform 0.3s;
+    }
+
+    .navbar .media-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background: url('images/banner.jpg') no-repeat center center/cover;
+      color: #fff;
+    }
+
+    .home .home-content {
+      max-width: 800px;
+    }
+
+    .home .text {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .home .text .text-one {
+      font-size: 36px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .home .text .text-two {
+      font-size: 50px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .home .text .text-three {
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .button button {
+      padding: 10px 20px;
+      background: #60a5fa;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .button button:hover {
+      background: #1e40af;
+      transform: translateY(-5px);
+    }
+
+    .experience-popup {
+      position: fixed;
+      top: 50px;
+      right: 50px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 400px;
+      display: none;
+      z-index: 1001;
+    }
+
+    .experience-popup .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .experience-popup .header h2 {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .experience-popup .header .close-btn {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .experience-popup ul {
+      margin-top: 15px;
+      list-style: none;
+    }
+
+    .experience-popup ul li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .experience-popup ul li i {
+      color: #1e3a8a;
+      margin-right: 10px;
+    }
+
+    /* Fade In Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+    <div class="home-content">
+      <div class="text">
+        <div class="text-one">My Working Experience</div>
+        <div class="text-two">Sai Vaibhav Kumar</div>
+        <div class="text-three">Web Developer | Innovator</div>
+      </div>
+      <div class="button">
+        <button onclick="toggleExperience()">View Experience</button>
+      </div>
+      
+    </div>
+  </section>
+
+  <div class="experience-popup" id="experiencePopup">
+    <div class="header">
+      <h2>My Work Experience</h2>
+      <button class="close-btn" onclick="toggleExperience()">×</button>
+    </div>
+    
+    <ul>
+        <div class="button">
+            <a href="Offer Letter.pdf"><button>View Offer Letter</button></a>
+          </div>
+      <li><i class="fas fa-briefcase"></i>Started Intership on Full-Stack Development</li>
+      <li><i class="fas fa-code"></i> Expertise in JavaScript, Python, and Java, HTML, CSS</li>
+      <li><i class="fas fa-cogs"></i> DevOps Implementation Projects</li>
+      <li><i class="fas fa-users"></i> Worked with 5+ Teams on Collaborative Web Projects</li>
+    </ul>
+  </div>
+  
+
+  <script>
+    function toggleExperience() {
+      const popup = document.getElementById('experiencePopup');
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+
+</html>
